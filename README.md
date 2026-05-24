@@ -41,6 +41,13 @@ The repo includes 5 projects:
  - Cascade in a Realistic Atmosphere
  - Auger Open Data Analysis
 
+### Project 1 - The Heitler Cascade Simulator
+This program calculates the number of particles produced in the simplified Heitler model of an EM cascade of cosmic rays. It outputs a plot of how the number of particles produced varies with atmospheric depth for a few different selected energies. 
+
+In the example figure, this was done for primary particle energies of 10^4, 10^6 and 10^8 MeV.
+
+![Number of Particles vs. Atmospheric Depth](figures/heitler_cascade.png)
+
 ```
 code blocks for commands
 ```
