@@ -85,8 +85,7 @@ def atm_depth(h):
 def slant_depth(theta=60.0, h=0):
     """theta [degrees]. only valid from 0-60 deg"""
     rad = np.radians(theta)
-    slant_depth = atm_depth(h) / np.cos(rad)
-    return slant_depth
+    return atm_depth(h) / np.cos(rad)
 
 
 def my_plotter(bins=120):
