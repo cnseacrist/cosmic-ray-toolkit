@@ -71,9 +71,7 @@ def pressure(h):
 
 
 def density(h):
-    return (M * pressure(h)) / (
-        R * temperature(h)
-    )  # vectorizing function to work with arrays
+    return (M * pressure(h)) / (R * temperature(h))
 
 
 def atm_depth(h):

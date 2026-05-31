@@ -35,7 +35,7 @@ def noise_generator(true_parameters, noise_fraction=0.05, seed=42):
 
 def main():
     X = np.linspace(0.0, 1200.0, 500)
-    for Nmax, Xmax in [(1e8, 500), (1e9, 625), (1e10, 750)]:
+    for Nmax, Xmax in [(5e8, 550), (1e9, 625), (5e9, 700)]:
         plt.plot(
             gaisser_hillas(X, Nmax, 0.0, Xmax, 70.0),
             label=f"Nmax={Nmax:.0e}, Xmax={Xmax}",

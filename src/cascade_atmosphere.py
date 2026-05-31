@@ -3,7 +3,7 @@ import numpy as np
 from scipy.interpolate import interp1d
 
 from atmosphere import atm_depth
-from heitler import X0, cascade_profile, x_max
+from heitler import X0, cascade_profile
 
 # create grids mapping altitude to depth using atm_depth from atmosphere.py
 h_grid = np.linspace(0, 85000, 1000)
@@ -11,9 +11,10 @@ depth_grid = np.array([atm_depth(h) for h in h_grid])
 
 
 def depth_to_alt(depth):
-    """return a function that takes a depth vector and returns the
-    corresponding altitude. interp requires monotonic increasing first argument.
-    Depth decreased as h increases."""
+    """Take a depth (or array of depths) in g/cm^2 and return the
+    corresponding altitude(s) in meters. interp1d needs a monotonic
+    increasing first argument, and depth decreases as altitude increases,
+    so both grids are reversed."""
     f = interp1d(depth_grid[::-1], h_grid[::-1])
     return f(depth)
 
