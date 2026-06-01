@@ -1,11 +1,16 @@
 import math
+import warnings
 
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy import integrate
+from scipy.integrate import IntegrationWarning
 
-# Building the US Standard Atmosphere layered model and integrating to get atmospheric depth
+warnings.filterwarnings(
+    "ignore", category=IntegrationWarning
+)  # round off warning near thin upper atmosphere
 
+"""Building the US Standard Atmosphere layered model and integrating to get atmospheric depth"""
 # Define standard layer values as a tuple
 # layer_example (base alitude [m], temperature [K], temperature lapse rate [K/m]) where the temperature lapse rate is the temp rate of change with altitude
 G0 = 9.80665  # m/s^2
@@ -76,7 +81,7 @@ def density(h):
 
 def atm_depth(h):
     h_max = LAYERS[-1][0]
-    depth, _ = integrate.quad(density, h, h_max)  # [kg/m^2]
+    depth, _ = integrate.quad(density, h, h_max, limit=200)  # [kg/m^2]
     return depth * 0.1  # [g / cm^2]
 
 

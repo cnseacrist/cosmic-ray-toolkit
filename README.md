@@ -6,7 +6,7 @@ This repo is for building out some of the basic calculations and computational p
 
 The project will include a simplified framework called the Heitler Toy Model to build out basic intuition of the cosmic ray cascade process and deliver fundamental physical takeaways that still hold true for modern iterations of cosmic ray cascade calculations. 
 
-That intuition will be extended to the more complex models like the Gaisser-Hillas function - a model that more thoroughly details the particle interactions in a cosmic ray cascade. Monte Carlo methods will be employed to simulate many different cascades and compare those results to open-source cosmic ray data, like that from the Pierre Auger Obervatory in Argentina.
+That intuition will be extended to the more complex models like the Gaisser-Hillas function - a model that more thoroughly details the particle interactions in a cosmic ray cascade. Noise generation will be employed to simulate statistical data and compare those results to open-source cosmic ray data, like that from the Pierre Auger Obervatory in Argentina.
 
 This project will include a implementation of the Standard Atmosphere calculation in which the cascades will occur, and then finally an analysis of the open source data from Pierre Auger. 
 
