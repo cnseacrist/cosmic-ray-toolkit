@@ -23,11 +23,11 @@ The program requirements can be found in requirements.txt and include:
 
 ### Installing & Running
 
-"```"
-git clone https://github.com/cnseacrist/cosmic-ray-toolkit.git
-cd cosmic-ray-toolkit
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+"```bash
+    git clone https://github.com/cnseacrist/cosmic-ray-toolkit.git\n  
+    cd cosmic-ray-toolkit  
+    python -m venv .venv && source .venv/bin/activate  
+    pip install -r requirements.txt  
 "```"
 Run any project's script from `src/`, or launch the Project 5 notebook with `jupyter lab`.
 
